@@ -3,7 +3,7 @@
 <div class="books edit">
   <h2>Edit Book</h2>
 
-  <%= form_for(@book) do |f| %>
+  <%= form_for(@book) do  |f| %>
     <% # url: task_path(@task), method: 'patch' %>
 
      <%= render(partial:'form', locals:{f:f}) %>
