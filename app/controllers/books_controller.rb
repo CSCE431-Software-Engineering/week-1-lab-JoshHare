@@ -18,7 +18,8 @@ class BooksController < ApplicationController
       redirect_to books_path
     else
       #assign instance variables needed
-      render('new') #new action not being called, just renders new template in view
+      flash[:notice] = "Book could not be created!"
+      redirect_to books_path #new action not being called, just renders new template in view
     end
   end
 
@@ -32,7 +33,8 @@ class BooksController < ApplicationController
       flash[:notice] = "Book successfully updated!"
       redirect_to book_path(@book)
     else
-      render('edit')
+      flash[:notice] = "Book could not be updated!"
+      redirect_to books_path
     end
   end
 
