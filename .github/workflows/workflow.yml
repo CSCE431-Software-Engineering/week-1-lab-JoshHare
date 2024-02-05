@@ -2,8 +2,8 @@ env:
   RUBY_VERSION: 3.1.2
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: snowball123
-  DATABASE_USER: postgres
-  DATABASE_PASSWORD: snowball123
+  DATABASE_USER: test_app
+  DATABASE_PASSWORD: test_password
 
 name: Rails tests
 on: [push, pull_request]
